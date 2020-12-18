@@ -31,7 +31,10 @@ $tweaks = @(
 
 	### External Program Setup
 	"InstallTitusProgs", #REQUIRED FOR OTHER PROGRAM INSTALLS!
-	"InstallAdobe",
+	"InstallPython",
+	"InstallVSCode",
+	"InstallFirefox",
+	"InstallJava",
 	"Install7Zip",
 
 	### Windows Apps
@@ -114,7 +117,7 @@ $tweaks = @(
 	# "SetTaskbarCombineWhenFull",    # "SetTaskbarCombineNever",     # "SetTaskbarCombineAlways",
 	# "HideTaskbarPeopleIcon",        # "ShowTaskbarPeopleIcon",
 	"ShowTrayIcons",                # "HideTrayIcons",
-	"DisableSearchAppInStore",      # "EnableSearchAppInStore",
+	"EnabldSearchAppInStore",      # "EnableSearchAppInStore",
 	"DisableNewAppPrompt",          # "EnableNewAppPrompt",
 	# "SetControlPanelSmallIcons",  # "SetControlPanelLargeIcons",  # "SetControlPanelCategories",
 	# "SetVisualFXPerformance",     # "SetVisualFXAppearance",
@@ -202,6 +205,21 @@ Function InstallTitusProgs {
 Function InstallAdobe {
 	Write-Output "Installing Adobe Acrobat Reader"
 	choco install adobereader -y
+}
+
+Function InstallFirefox {
+	Write-Output "Installing Firefox"
+	choco install firefox -y
+}
+
+Function InstallVSCode {
+	Write-Output "Installing VSCode"
+	choco install vscode -y
+}
+
+Function InstallPython {
+	Write-Output "Installing Python"
+	choco install fpython -y
 }
 
 Function InstallJava {
